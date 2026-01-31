@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+<header>
+  <img src="./images/logo.svg" alt="">
+</header>
+
+<body>
+
+  <main>
+    <form>
+      <div class="inputMsg">
+        <label for="bill">Bill</label>
+        <span id="errorMsg">Can't be zero</span>
+      </div>
+      <div class="inputsWithIcons">
+        <input type="text" name="bill" id="billInput" placeholder="0">
+        <img src="./images/icon-dollar.svg" alt="icon-dollar">
+      </div>
+
+      
+      <label for="tipsButtons">Select Tip %</label>
+      <div id="tipsButtons" class="presetTips">
+        <button id="five" type="button">5%</button>
+        <button id="ten" type="button">10%</button>
+        <button id="fifteen" type="button">15%</button>
+        <button id="twentyFive" type="button">25%</button>
+        <button id="fifty" type="button">50%</button>
+        <input type="text" name="customTip" id="customTip" placeholder="Custom">
+        
+      </div>
+      <span id="customTipError">Can't be zero</span>
+      <div class="inputMsg">
+        <label for="customersNumber">Number of People</label>
+        <span id="errorMsg2">Can't be zero</span>
+      </div>
+      <div class="inputsWithIcons">
+        <input type="text" name="customersNumber" id="customers" placeholder="0">
+        <img src="./images/icon-person.svg" alt="icon-person">
+      </div>
+
+    </form>
+    <div class="results">
+      <div>
+        <h1>Tip Amount <p>/ person</p></h1>
+        <span id="tipAmountPerson"></span>
+      </div>
+      <div>
+        <h1>Total <p>/ person</p></h1>
+        <span id="billTotalPerson"></span>
+      </div>
+      <button id="resetBtn">Reset</button>
+    </div>
+  
+</main>
+<script src="./index.js"></script>
+</body>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <br>
+    Coded by <a href="#">Mateus Risso Di Blasio</a>.
+  </footer>
+</html>

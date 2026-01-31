@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    font-family: "Space Mono", monospace;
+}
+
+header{
+    font-family: "Space Mono", monospace;
+    padding: 40px 0 32px 0;
+    h1{
+        color: hsl(183, 100%, 15%);
+        font-size: 24px;
+        letter-spacing: 10px;
+    }
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    background-color:  hsl(0, 100%, 100%);
+    border-radius: 25px 25px 0 0;
+    width: 335px;
+    padding: 32px 20px;
+    form{
+        padding: 0px 12px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2px;
+        .inputsWithIcons{
+            img{
+                transform: translate(18px, -50px);
+                height: 16px;
+            }
+            #billInput:focus{
+                outline: none;
+                border: 2px solid hsl(172, 67%, 45%);
+            }
+            #customers:focus{
+                outline: none;
+                border: 2px solid hsl(172, 67%, 45%);
+            }
+        }
+        label{
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0px;
+            line-height: 24px;
+            color: hsl(186, 14%, 43%);
+            margin-bottom: 8px;
+        }
+        input{
+            padding: 8px 16px;
+            height: 32px;
+            width: 279px;
+            border: 2px solid transparent;
+            background-color: hsl(189, 47%, 97%);
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0px;
+            border-radius: 5px;
+            color: hsl(183, 100%, 15%);
+            font-weight: bold;
+            margin-bottom: 16px;
+            text-align: end;
+        }
+        input:hover{
+            border: 2px solid hsl(172, 67%, 45%);
+            cursor: pointer;
+        }
+        input::placeholder{
+            color: hsl(183, 100%, 15%);
+            opacity: 0.35;
+        }
+        #tipsButtons{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            gap: 16px;
+            button{
+                width: 147px;
+                border: none;
+                border-radius: 5px;
+                background-color: hsl(183, 100%, 15%);
+                color:hsl(189, 47%, 97%);
+                padding: 6px;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            button:hover{
+                background-color: hsl(173, 61%, 77%);;
+                color: hsl(183, 100%, 15%);
+                cursor: pointer;
+            }
+            input{
+                width: 111px;
+                margin-bottom: 0px;
+                border: 2px solid transparent;
+            }
+            input::placeholder{
+                color: hsl(180, 18%, 40%);
+                opacity: 1;
+                text-align: center;
+            }
+            input:hover{
+                border: 2px solid hsl(172, 67%, 45%);
+                cursor: pointer;
+            }
+            #customTip:focus{
+                outline: none;
+                border: 2px solid hsl(172, 67%, 45%);
+            }
+            .active{
+                background-color: hsl(172, 67%, 45%);
+                color: hsl(183, 100%, 15%);
+            }
+        }
+        .inputMsg{
+            display: flex;
+            justify-content: space-between;
+            #errorMsg, #errorMsg2{
+                opacity: 0;
+                color:hsl(13, 70%, 60%);
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 0px;
+                line-height: 24px;
+            }
+            #errorMsg.activeMsg, #errorMsg2.activeMsg{
+                opacity: 1;
+            }
+        }
+        #customers.activeMsg, #billInput.activeMsg, #customTip.activeMsg {
+            border: 2px solid hsl(13, 70%, 60%);
+        }
+        #customTipError{
+            opacity: 0;
+            height: 0;
+            color:hsl(13, 70%, 60%);
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 0px;
+            line-height: 24px;
+            transform: translate(210px, -35px);
+            width: 100px;
+        }
+        #customTipError.activeMsg{
+            opacity: 1;
+        }
+    }
+    .results{
+        display: flex;
+        flex-direction: column;
+        padding: 34px 24px 24px 24px;
+        width: 279px;
+        height: 198px;
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 15px;
+        gap: 24px;
+        justify-self: center;
+        div{
+            display: flex;
+            justify-content: space-between;
+            height: 47px;
+            h1{
+                font-size: 16px;
+                color: hsl(189, 47%, 97%);
+                line-height: 20px;
+                p{
+                    font-size: 14px;
+                    color: hsl(184, 14%, 56%);
+                }
+            }
+            span{
+                display: flex;
+                align-items: center;
+                color:hsl(172, 67%, 45%);
+                height: 47px;
+                font-size: 34px;
+                font-weight: bold;
+                transform: translate(0, -6px );
+            }
+        }
+        button{
+            padding: 9.5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: hsl(172, 67%, 45%);
+            color: hsl(183, 100%, 15%);
+            margin-top: 4px;
+        }
+        button:hover{
+            background-color: hsl(173, 61%, 77%);
+            cursor: pointer;
+        }
+    }
+}
+.attribution {
+    margin: 20px;
+    font-size: 11px;
+    text-align: center;
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media (min-width: 768px){
+
+    main{
+        width: 448px;
+        padding: 48px 80px;
+        border-radius: 25px;
+        form{
+            padding: 0px 0px;
+            width: 457px;
+            margin-top: 2px;
+            input{
+                width: 421px;
+            }
+            #tipsButtons{
+                button{
+                    width: 141.67px;
+                }
+                input{
+                    width: 105.67px;
+                }
+            }
+            #customTipError{
+                transform: translate(362px, -35px);
+            }
+        }
+        .results{
+            padding: 24px 32px;
+            width: 393px;
+            height: 252px;
+            gap: 0px;
+            justify-content: center;
+            div{
+                align-self: center;
+                align-items: center;
+                width: 362px;
+                height: 71px;
+                margin-bottom: 8px;
+                span{
+                    height: 71px;
+                    font-size: 48px;
+                }
+            }
+            button{
+                width: 362px;
+                margin-top: 8px;
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px){
+
+    body{
+        height: 100vh;
+        justify-content: center;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 856px;
+        height: 417px;
+        padding: 32px;
+        border-radius: 25px;
+        gap: 48px;
+        form{
+            align-self: center;
+            justify-self: center;
+            padding: 0px 0px;
+            width: 379px;
+            height: 384px;
+            margin-top: 0px;
+            input{
+                width: 343px;
+            }
+            #tipsButtons{
+                button{
+                    width: 115px;
+                }
+                input{
+                    width: 96px;
+                    padding: 8px;
+                    font-size: 24px;
+                }
+            }
+            .inputsWithIcons:last-child{
+                img{
+                    transform: translate(18px, -35px);
+                }
+            }
+            #customers{
+                margin-bottom: 0;
+            }
+            #customTipError{
+                transform: translate(280px, -35px);
+            }
+        }
+        .results{
+            width: 349px;
+            height: 369px;
+            div{
+                width: 333px;
+                margin-bottom: 24px;
+            }
+            button{
+                width: 333px;
+                margin-top: 104px;
+            }
+        }
+    }
+}
