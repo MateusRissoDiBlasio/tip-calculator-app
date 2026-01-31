@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/tip-calculator-app-Csc_SVSvPk](https://www.frontendmentor.io/solutions/tip-calculator-app-Csc_SVSvPk)
 - Live Site URL: [https://mateusrissodiblasio.github.io/tip-calculator-app](https://mateusrissodiblasio.github.io/tip-calculator-app)
 
 ## My process
